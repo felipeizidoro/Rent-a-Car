@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Rent a Car</title>
+</head>
+<body>
+    <header>
+        <div class="banner"></div>
+    </header>
+    <main class="container">
+        <section class="title">
+            <h1>Select the best option for you!</h1>
+        </section>
+        <section class="cars">
+            <div class="carGroup">
+                <img class="CategoryA" src="images/categoryA.png" alt="Category A">
+                <h3>Category A</h3>
+                <p class="description">Basic car, ideal for companies.</p>
+                <p>US$: 39,90 per day</p>
+                <p>plus 0,20 cents per km driven.</p>
+            </div>
+            <div class="carGroup">
+                <img class="CategoryB" src="images/categoryB.png" alt="Category B">
+                <h3>Category B</h3>
+                <p class="description">Medium car, ideal for short trips.</p>
+                <p>US$: 69,90 per day</p>
+                <p>plus 0,20 cents per km driven.</p>
+            </div>
+            <div class="carGroup">
+                <img class="CategoryC" src="images/categoryC.png" alt="Category C">
+                <h3>Category C</h3>
+                <p class="description">Complete car, travel wiht the family.</p>
+                <p>US$: 99,90 per day</p>
+                <p>plus 0,20 cents per km driven.</p>
+            </div>
+        </section>
+        <section class="selectors">
+            <form class="form">
+                <h3 class="titleForm">Let's rent a car!</h3>
+                <label for="days" id="labelDays">How many days:</label> 
+                <input class="input" type="number" name="days" id="getDays" placeholder="Insert the days:"><br>
+                <label for="km">How many Kilometers:</label>
+                <input class="input" type="number" name="km" id="getKm" placeholder="Insert Km:"><br>
+                <label for="chooseCategory">Choose the Category:</label>
+                <select class="input" id="chooseCategory" onchange="changeCategory()">
+                    <option value="selectcategory" selected disabled>Select Category</option>
+                    <option value="CategoryA">Category A</option>
+                    <option value="CategoryB">Category B</option>
+                    <option value="CategoryC">Category C</option>
+                </select>
+                
+                
+                <input type="button" value="Rent a Car" class="button" onclick="rent()" >
+            </form>
+            <div class="carGroup" id="answer">
+
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h5>Rent a Car</h5>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
